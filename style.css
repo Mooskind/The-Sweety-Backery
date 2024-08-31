@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --highlight: #fe217d;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    --border: 0.2rem solid rgba(0, 0, 0, 0.1);
+    --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
+    --outline-hover: 0.2rem solid var(--black);
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black);
+  }
+  
+  button {
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    background-color: var(--highlight);
+  }
+  
+  button:hover {
+    color: white;
+  }
+  
+  a:link,
+  a:visited {
+    color: black;
+    text-decoration: none;
+  }
+  
+  /* NAVBAR STYLES */
+  
+  nav {
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    background-color: white;
+    right: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  
+  .logo {
+    font-family: "Pacifico", cursive;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .navMenu {
+    display: none;
+  }
+  
+  .navIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .navIcon button, label {
+    width: 3rem;
+    height: 3rem;
+    padding: 0.9rem;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .navIcon li:hover,
+  .navIcon a:hover {
+    background-color: var(--highlight);
+    color: white;
+  }
+  
+  /* HAMBURGER DROP DOWN MENU */
+  
+  .navMenu2 {
+    display:none;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  #menu-btn:checked ~ .navMenu2 {
+    display: block;
+    position: absolute;
+    background: #e1fbf4;
+    border: var(--border);
+    top: 64px;
+    right: 70px;
+    padding: 2em;
+    list-style-type: none;
+  }
+  
+  #menu-btn:checked ~ .navMenu2 li {
+    padding: 0.5rem;
+  }
+  
+  /* HEADER STYLES */
+  
+  header {
+    background-image: url(/images/sweetBg.jpg);
+    background-position: center;
+    background-size: cover;
+    padding: 5rem 0;
+    margin-top: 5rem;
+  }
+  
+  h1,
+  p {
+    padding: 1rem 0;
+  }
+  
+  span {
+    color: var(--highlight);
+  }
+  
+  p {
+    color: var(--light-color);
+  }
+  
+  /* MAIN STLYES */
+  
+  main {
+    background-color: #ecebeb;
+  }
+  
+  .boxMain {
+    margin: 0.5rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    background-color: #e1fbf4;
+  }
+  
+  .boxMain img {
+    width: 20vw;
+  }
+  
+  /* TABLET VERSION */
+  
+  @media screen and (min-width: 601px) {
+    header {
+      padding: 5rem 4rem;
+    }
+  
+  
+  
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding: 0.5rem 3rem;
+    }
+  
+    .boxMain {
+      flex-basis: 20%;
+      flex-grow: 1;
+    }
+  }
+  
+  /* DESKTOP VERSION */
+  
+  @media screen and (min-width: 830px) {
+  
+    .navMenu {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      padding-top: 1.5rem;
+      gap: 2rem;
+    }
+  
+    .navMenu a:hover {
+      border-bottom: 2px solid var(--highlight);
+    }
+  
+     label {
+      display: none;
+    }
+  }
